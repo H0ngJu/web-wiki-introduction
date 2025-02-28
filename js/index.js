@@ -1,6 +1,8 @@
-const registerButton = document.getElementById(`register-button`);
+const registerButton = document.getElementById("register-button");
+const cancelButton = document.getElementById("cancel-button");
 const textArea = document.getElementById("input-text");
 const commentList = document.querySelector(".comment-list");
+
 registerButton.addEventListener("click", (event) => {
   event.preventDefault();
   if (textArea.value) {
@@ -18,7 +20,13 @@ registerButton.addEventListener("click", (event) => {
       </div>`;
 
     commentList.prepend(newComment);
+    alert("댓글이 등록되었습니다!");
 
     textArea.value = "";
   }
+});
+
+cancelButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  textArea.value = "";
 });

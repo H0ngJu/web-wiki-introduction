@@ -186,6 +186,13 @@ fieldset {
   height: 40px;
   color: black;
   border: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#cancel-button,
+#register-button:hover {
+  border-color: #222;
 }
 
 #register-button {
